@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perritos",
+  "info": {
+    "singularName": "perrito",
+    "pluralName": "perritos",
+    "displayName": "perrito"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 2,
+      "maxLength": 20
+    },
+    "foto": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "macho",
+        "hembra"
+      ],
+      "default": "macho",
+      "required": true
+    },
+    "edad": {
+      "type": "integer",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "default": "Perrito rescatado de la calle",
+      "required": true,
+      "minLength": 15
+    }
+  }
+}
